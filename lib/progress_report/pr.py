@@ -24,31 +24,32 @@ def _form(listplanning):
 def _submit_progress(nama):
     filename = "planning_"+nama+".csv"
     file_planning = pd.read_csv(filename)
-    list_plan = file_planning["planning"].tolist()
-    data = _form(list_plan)
-    selected_plan = file_planning.loc[file_planning["planning"] == data["planning"]]
-    start_date = selected_plan["start_date"][0]
-    end_date = selected_plan["end_date"][0]
-    df = pd.read_csv("progress.csv")
-    input_df = pd.DataFrame([{
-        "nama": nama,
-        "planning": data["planning"],
-        "start_date": start_date,
-        "end_date": end_date,
-        "datetime_report": data["datetime_report"],
-        "task": data["task"],
-        "status": data["status"],
-        "kendala": data["kendala"],
-        "keterangan": data["keterangan"]
-    }])
-    df = df.append(input_df).reset_index(drop=True)
-    submit = st.button("Submit")
-    if submit:
-        try:
-            df.to_csv("progress.csv", index=False)
-            st.success("Success")
-        except:
-            st.error("Failed")
+    if file_planning:
+        list_plan = file_planning["planning"].tolist()
+        data = _form(list_plan)
+        selected_plan = file_planning.loc[file_planning["planning"] == data["planning"]]
+        start_date = selected_plan["start_date"][0]
+        end_date = selected_plan["end_date"][0]
+        df = pd.read_csv("progress.csv")
+        input_df = pd.DataFrame([{
+            "nama": nama,
+            "planning": data["planning"],
+            "start_date": start_date,
+            "end_date": end_date,
+            "datetime_report": data["datetime_report"],
+            "task": data["task"],
+            "status": data["status"],
+            "kendala": data["kendala"],
+            "keterangan": data["keterangan"]
+        }])
+        df = df.append(input_df).reset_index(drop=True)
+        submit = st.button("Submit")
+        if submit:
+            try:
+                df.to_csv("progress.csv", index=False)
+                st.success("Success")
+            except:
+                st.error("Failed")
 
 def progress():
     nama = st.selectbox("Name", EMPLOYEE)

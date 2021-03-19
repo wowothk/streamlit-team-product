@@ -1,0 +1,11 @@
+nama,planning,task_score,start_date,end_date,datetime_report,task,status,kendala,keterangan
+Frey,Membuat Halaman Usermanagement,2,2021-03-15,2021-03-23,2021-03-23,slicing,Done,format yang berbeda dengan yang database,
+Frey,Membuat Halaman Usermanagement,2,2021-03-15,2021-03-23,2021-03-23,implementasi api,On Progress,format yang berbeda dengan yang database,
+Frey,Membuat Halaman Usermanagement,2,2021-03-15,2021-03-23,2021-03-23,implementasi api,On Progress,format yang berbeda dengan yang database,
+Frey,Membuat Halaman Usermanagement,2,2021-03-15,2021-03-23,2021-03-23,implementasi api,Break,format yang berbeda dengan yang database,
+Frey,Membuat Halaman Usermanagement,2,2021-03-15,2021-03-23,2021-03-23,implementasi api,Done,format yang berbeda dengan yang database,
+Martin,Membuat warehouse,2,2021-03-15,2021-03-23,2021-03-23,bikin skema database,To Do,format yang berbeda dengan yang database,
+Martin,Membuat warehouse,2,2021-03-15,2021-03-23,2021-03-23,bikin skema database,Done,format yang berbeda dengan yang database,
+Martin,Membuat warehouse,2,2021-03-15,2021-03-23,2021-03-23,implementasi fungsi,On Progress,format yang berbeda dengan yang database,
+Martin,Membuat warehouse,2,2021-03-15,2021-03-23,2021-03-23,implementasi fungsi,On Progress,format yang berbeda dengan yang database,
+Martin,Membuat warehouse,2,2021-03-15,2021-03-23,2021-03-23,implementasi fungsi,Done,format yang berbeda dengan yang database,

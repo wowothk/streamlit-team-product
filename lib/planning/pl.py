@@ -5,6 +5,7 @@ EMPLOYEE = ["Frey", "Martin", "Fiki", "Arief"]
 
 def _form():
     planning = st.text_input("Planning")
+    task_score = st.text_input("Task Score")
     startdate = st.date_input("Start Date")
     enddate = st.date_input("End Date")
     return planning, startdate, enddate
